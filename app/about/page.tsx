@@ -7,6 +7,7 @@ export default function About() {
   return (
     <div className="">
         <div className="bg-red-500">About Us</div>
+        
     </div>
   );
 }
