@@ -1,11 +1,19 @@
 @import "tailwindcss";
 
+/* Apply Inter font globally */
+body {
+  font-family: var(--font-inter), sans-serif;
+}
+
 /* Custom color definitions for Tailwind v4 */
 @theme {
   --color-navy: #002363;
   --color-marine: #174A74;
   --color-solar: #FFD700;
   --color-cloud: #fffbea;
+  --color-sun: #FFA600;
+
+  --font-family-inter: var(--font-inter);
 
   /* You can also define color palettes */
   --color-brand-primary: #002363;
@@ -33,5 +41,56 @@
   .responsive-bg {
     background-image: url('/solarPanelImageBig.png');
   }
+}
+
+/* Slide-in from left animation */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation classes with different delays */
+.animate-slide-in-1,
+.animate-slide-in-2,
+.animate-slide-in-3,
+.animate-slide-in-4,
+.animate-slide-in-5,
+.animate-slide-in-6 {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.animate-slide-in-1 {
+  animation: slideInFromLeft 0.8s ease-out 0.2s both;
+}
+
+.animate-slide-in-2 {
+  animation: slideInFromLeft 0.8s ease-out 0.4s both;
+}
+
+.animate-slide-in-3 {
+  animation: slideInFromLeft 0.8s ease-out 0.6s both;
+}
+
+.animate-slide-in-4 {
+  animation: slideInFromLeft 0.8s ease-out 0.9s both;
+}
+
+.animate-slide-in-5 {
+  animation: slideInFromLeft 0.8s ease-out 1.2s both;
+}
+
+.animate-slide-in-6 {
+  animation: slideInFromLeft 0.8s ease-out 1.4s both;
+}
+
+.transition-light-dark {
+  transition: background-color 0.3s ease-in-out;
 }
 

@@ -14,7 +14,7 @@ const Navbar = () => {
         <nav className="relative">
             <div className="w-full py-3 px-4 flex items-center justify-between md:justify-start md:gap-6">
                 {/* Home link - always visible */}
-                <Link href="/" className="btn btn-primary text-red-500">
+                <Link href="/" className="btn btn-primary text-black font-">
                     Lumina
                 </Link>
 
@@ -24,20 +24,20 @@ const Navbar = () => {
                     className="md:hidden flex flex-col space-y-1 p-2"
                     aria-label="Toggle menu"
                 >
-                    <span className="block w-6 h-0.5 bg-red-500"></span>
-                    <span className="block w-6 h-0.5 bg-red-500"></span>
-                    <span className="block w-6 h-0.5 bg-red-500"></span>
+                    <span className="block w-6 h-0.5 bg-black"></span>
+                    <span className="block w-6 h-0.5 bg-black"></span>
+                    <span className="block w-6 h-0.5 bg-black"></span>
                 </button>
 
                 {/* Desktop horizontal links (md and above) */}
                 <div className="hidden md:flex items-center gap-6">
-                    <Link href="/services" className="btn btn-primary text-red-500">
+                    <Link href="/services" className="btn btn-primary text-black">
                         Services
                     </Link>
-                    <Link href="/about" className="btn btn-primary text-red-500">
+                    <Link href="/about" className="btn btn-primary text-black">
                         About Us
                     </Link>
-                    <Link href="/contact" className="btn btn-primary text-red-500">
+                    <Link href="/contact" className="btn btn-primary text-black">
                         Contact
                     </Link>
                 </div>
