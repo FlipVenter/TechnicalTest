@@ -47,6 +47,13 @@ const Navbar = () => {
                     <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50">
                         <div className="py-2">
                             <Link
+                                href="/"
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Home
+                            </Link>
+                            <Link
                                 href="/services"
                                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                 onClick={() => setIsOpen(false)}
