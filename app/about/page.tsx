@@ -56,7 +56,7 @@ export default function About() {
 
       {/* Company Mission Section */}
       <div className="w-full flex flex-col items-center justify-center gap-6 p-8 z-10">
-        <div className="w-2/3 p-6 text-center rounded-md shadow-md bg-white">
+        <div className="w-3/4 p-6 text-center rounded-md shadow-md bg-white">
           <h2 className="text-2xl font-bold text-sun mb-2">Our Mission</h2>
           <p>
             Founded in 2023, Lumina aims to make renewable energy accessible to
@@ -65,7 +65,7 @@ export default function About() {
         </div>
 
         {/* Optional: Team Section Placeholder */}
-        <div className="w-2/3 p-6 text-center  rounded-md shadow-md bg-white">
+        <div className="w-3/4 p-6 text-center  rounded-md shadow-md bg-white">
           <h2 className="text-2xl font-bold text-sun mb-2">Meet the Team</h2>
           <p>Team members will be displayed here soon.</p>
         </div>
