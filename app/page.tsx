@@ -74,7 +74,7 @@ export default function Home() {
 
 
       <foreignObject x="0" y="50" width="97" height="50">
-        <div xmlns="http://www.w3.org/1999/xhtml" className="flex flex-col items-center justify-center w-full h-full gap-1">
+        <div className="flex flex-col items-center justify-center w-full h-full gap-1">
           <div className="text-[6px] md:text-[22px] text-white text-center">Get a quote Today</div>
           <button className="text-white bg-black hover:bg-amber-500 focus:bg-sun focus:border-black focus:text-black rounded-[2px] md:rounded-[10px] px-1 md:px-6 py-1 md:py-3 border-1 border-white text-[6px] md:text-white">
             Get Started
