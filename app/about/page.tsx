@@ -9,7 +9,7 @@ export default function About() {
       {/* Background SVG underlay */}
       <div className="absolute bottom-0 left-0 w-full z-0 pointer-events-none ">
         <Image
-          src="/svg/solarpanels.svg"
+          src="/svg/about.svg"
           alt=""
           width={1920}
           height={300}
