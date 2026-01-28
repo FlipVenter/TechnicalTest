@@ -1,8 +1,30 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 export default function About() {
+  const [isVisible, setIsVisible] = useState(false);
+  const featuresRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 },
+    );
+
+    if (featuresRef.current) {
+      observer.observe(featuresRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="relative flex flex-col min-h-screen w-full overflow-hidden">
       {/* Background SVG underlay */}
@@ -18,9 +40,18 @@ export default function About() {
       </div>
 
       {/* Hero Section */}
-      <div className="h-4/5 flex flex-col items-start justify-center p-4 text-[50px] font-bold leading-tight">
-        <div>About</div>
-        <div className="text-sun">Us</div>
+      <div
+        ref={featuresRef}
+        className="h-4/5 flex flex-col items-start justify-center p-4 text-[50px] font-bold leading-tight"
+      >
+        <div className={`${isVisible ? "animate-slide-in-1" : "opacity-0"} `}>
+          About
+        </div>
+        <div
+          className={`${isVisible ? "animate-slide-in-1" : "opacity-0"} text-sun`}
+        >
+          Us
+        </div>
       </div>
 
       {/* Company Mission Section */}

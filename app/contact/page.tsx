@@ -1,9 +1,30 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 export default function Contact() {
+  const [isVisible, setIsVisible] = useState(false);
+  const featuresRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 },
+    );
+
+    if (featuresRef.current) {
+      observer.observe(featuresRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -59,9 +80,18 @@ export default function Contact() {
       </div>
 
       {/* Hero Section */}
-      <div className="h-4/5 flex flex-col items-start justify-center p-4 text-[50px] font-bold leading-tight z-10">
-        <div>Contact</div>
-        <div className="text-sun">Us</div>
+      <div
+        ref={featuresRef}
+        className="h-4/5 flex flex-col items-start justify-center p-4 text-[50px] font-bold leading-tight z-10"
+      >
+        <div className={`${isVisible ? "animate-slide-in-1" : "opacity-0"}`}>
+          Contact
+        </div>
+        <div
+          className={`${isVisible ? "animate-slide-in-1" : "opacity-0"} text-sun`}
+        >
+          Us
+        </div>
       </div>
 
       {/* Contact Form Section */}

@@ -1,8 +1,30 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 export default function Services() {
+  const [isVisible, setIsVisible] = useState(false);
+  const featuresRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 },
+    );
+
+    if (featuresRef.current) {
+      observer.observe(featuresRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="relative w-full min-h-screen flex flex-col overflow-hidden">
       {/* Background SVG underlay */}
@@ -18,9 +40,18 @@ export default function Services() {
       </div>
 
       {/* Hero Section */}
-      <div className="h-4/5 flex flex-col items-start justify-center p-4 text-[50px] font-bold leading-tight z-10">
-        <div>Our</div>
-        <div className="text-sun">Services</div>
+      <div
+        ref={featuresRef}
+        className="h-4/5 flex flex-col items-start justify-center p-4 text-[50px] font-bold leading-tight z-10"
+      >
+        <div className={`${isVisible ? "animate-slide-in-1" : "opacity-0"}`}>
+          Our
+        </div>
+        <div
+          className={`${isVisible ? "animate-slide-in-1" : "opacity-0"} text-sun`}
+        >
+          Services
+        </div>
       </div>
 
       {/* Services List Section */}
