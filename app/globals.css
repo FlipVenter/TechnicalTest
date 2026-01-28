@@ -29,20 +29,6 @@ body {
   background-repeat: no-repeat;
 }
 
-/* Tablet and larger screens (768px+) */
-@media (min-width: 768px) {
-  .responsive-bg {
-    background-image: url('/solarPanelImageBig.png');
-  }
-}
-
-/* Desktop and larger screens (1024px+) - using the same big image */
-@media (min-width: 1024px) {
-  .responsive-bg {
-    background-image: url('/solarPanelImageBig.png');
-  }
-}
-
 /* Slide-in from left animation */
 @keyframes slideInFromLeft {
   0% {

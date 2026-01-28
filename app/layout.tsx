@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} overscroll-x-none overscroll-y-none`}>
+      <body className={`${inter.variable} overscroll-x-none overscroll-y-none p-0 m-0`}>
         <Navbar />
         <main>
           {children}
