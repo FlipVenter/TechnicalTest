@@ -4,43 +4,55 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <div className="w-full min-h-screen flex flex-col p-0 m-0">
+    <div className="relative w-full min-h-screen flex flex-col overflow-hidden">
+
+          {/* Background SVG underlay */}
+      <div className="absolute bottom-0 left-0 w-full z-0 pointer-events-none ">
+        <Image
+          src="/svg/solarpanels.svg"
+          alt=""
+          width={1920}
+          height={300}
+          className="w-full h-auto"
+          priority
+        />
+      </div>
       
       {/* Hero Section */}
       <div
-        className="h-4/5 flex flex-col items-start justify-center p-4 text-[50px] font-bold leading-tight"
+        className="h-4/5 flex flex-col items-start justify-center p-4 text-[50px] font-bold leading-tight z-10"
       >
         <div>Our</div>
         <div className="text-sun">Services</div>
       </div>
 
       {/* Services List Section */}
-      <div className="w-full flex flex-col items-center justify-center gap-6 p-8 ">
-        <div className="w-2/3 p-6 text-center rounded-md shadow-md">
+      <div className="w-full flex flex-col items-center justify-center gap-6 p-8  z-10">
+        <div className="w-3/4 p-6 text-center rounded-md shadow-md bg-white">
           <h2 className="text-2xl font-bold text-sun mb-2">Residential Installation</h2>
           <p>Complete solar panel setup tailored to your home.</p>
         </div>
 
-        <div className="w-2/3 p-6 text-center  rounded-md shadow-md">
+        <div className="w-3/4 p-6 text-center  rounded-md shadow-md bg-white z-10">
           <h2 className="text-2xl font-bold text-sun mb-2">Battery Storage</h2>
           <p>Tesla Powerwall and general battery backup systems.</p>
         </div>
 
-        <div className="w-2/3 p-6 text-center rounded-md shadow-md">
+        <div className="w-3/4 p-6 text-center rounded-md shadow-md bg-white z-10">
           <h2 className="text-2xl font-bold text-sun mb-2">Maintenance & Cleaning</h2>
           <p>Annual checkups to keep your system at maximum efficiency.</p>
         </div>
       </div>
 
       {/* CTA Section since the services are mentioned on this page */}
-      <div className="w-full flex justify-center p-8 ">
+      <div className="w-full flex justify-center p-8  z-10">
         <button className="bg-black text-white hover:bg-amber-500 px-6 py-3 rounded-lg font-bold">
           Get a Free Quote
         </button>
       </div>
 
     {/* Footer with horizon SVG */}
-    <div className="relative w-full mt-auto overflow-hidden">
+    <div className="relative w-full mt-auto overflow-hidden z-10">
       <svg
         viewBox="0 0 97 36"
         xmlns="http://www.w3.org/2000/svg"
@@ -55,6 +67,7 @@ export default function Services() {
         <path d="M96.5 21.4014V35.4014H0.5V21.4014M96.5 21.4014H43M96.5 21.4014V14.9014L82 5.4014L62 15.9014L48.5 8.4014L45.5 9.9014L40.5 6.9014L28.5 15.6514M0.5 21.4014L14 9.9014L28.5 15.6514M0.5 21.4014H43M43 21.4014L28.5 15.6514" stroke="black"/>
       </svg>
     </div>
+
   </div>
   );
 }

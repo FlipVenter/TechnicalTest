@@ -14,7 +14,7 @@ const Navbar = () => {
         <nav className="relative">
             <div className="w-full py-3 px-4 flex items-center justify-between md:justify-start md:gap-6">
                 {/* Home link - always visible */}
-                <Link href="/" className="btn btn-primary text-black font-">
+                <Link href="/" className=" text-black hover:text-sun hover:font-bold">
                     Lumina
                 </Link>
 
@@ -48,7 +48,7 @@ const Navbar = () => {
                         <div className="py-2">
                             <Link
                                 href="/"
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-sun"
                                 onClick={() => setIsOpen(false)}
                             >
                                 Home

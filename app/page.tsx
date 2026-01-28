@@ -26,7 +26,19 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen flex flex-col p-0 m-0">
+    <div className="relative w-full min-h-screen flex flex-col p-0 m-0 overflow-hidden">
+
+        {/* Background SVG underlay */}
+        <div className="absolute bottom-0 left-0 w-full z-0 pointer-events-none ">
+          <Image
+            src="/svg/solarpanels.svg"
+            alt=""
+            width={1920}
+            height={300}
+            className="w-full h-auto"
+            priority
+          />
+        </div>
         
         {/* Hero Section: Needs a catchy headline (e.g., "Power Your Home with the Sun"). */}
         <div className="h-4/5 text-wrap text-[60px] font-bold leading-tight p-4 bg-center bg-no-repeat flex flex-col items-start justify-start"
@@ -76,7 +88,7 @@ export default function Home() {
       <foreignObject x="0" y="50" width="97" height="50">
         <div className="flex flex-col items-center justify-center w-full h-full gap-1">
           <div className="text-[6px] md:text-[22px] text-white text-center">Get a quote Today</div>
-          <button className="text-white bg-black hover:bg-amber-500 focus:bg-sun focus:border-black focus:text-black rounded-[2px] md:rounded-[10px] px-1 md:px-6 py-1 md:py-3 border-1 border-white text-[6px] md:text-white">
+          <button className="text-white bg-black hover:bg-amber-500 focus:bg-sun focus:border-black focus:text-black rounded-xs  md:rounded-[10px] px-1  py-1 border border-white text-[6px] md:text-white">
             Get Started
           </button>
         </div>
@@ -86,7 +98,7 @@ export default function Home() {
 </div>
 
         {/* Features: Highlight 3 key benefits: Save Money, Eco-Friendly, 25-Year Warranty */}
-        <div ref={featuresRef} className=" h-140 justify-center items-center flex flex-col gap-[15px] ">
+        <div ref={featuresRef} className=" h-140 justify-center items-center flex flex-col gap-[15px]">
           <div className={`${isVisible ? "animate-slide-in-1" : "opacity-0"} w-2/3 p-3 text-center text-2xl font-bold text-sun `}>Save Money</div>
           <div className={`${isVisible ? "animate-slide-in-2" : "opacity-0"} text-xl`}>and enjoy a</div>
           <div className={`${isVisible ? "animate-slide-in-3" : "opacity-0"} w-2/3 p-3 text-center text-2xl font-bold text-sun`}>25-Year Warranty</div>

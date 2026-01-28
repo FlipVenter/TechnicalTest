@@ -4,7 +4,19 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="flex flex-col min-h-screen w-full">
+    <div className="relative flex flex-col min-h-screen w-full overflow-hidden">
+
+      {/* Background SVG underlay */}
+      <div className="absolute bottom-0 left-0 w-full z-0 pointer-events-none ">
+        <Image
+          src="/svg/solarpanels.svg"
+          alt=""
+          width={1920}
+          height={300}
+          className="w-full h-auto"
+          priority
+        />
+      </div>
 
       {/* Hero Section */}
       <div className="h-4/5 flex flex-col items-start justify-center p-4 text-[50px] font-bold leading-tight">
@@ -13,8 +25,8 @@ export default function About() {
       </div>
 
       {/* Company Mission Section */}
-      <div className="w-full flex flex-col items-center justify-center gap-6 p-8 ">
-        <div className="w-2/3 p-6 text-center rounded-md shadow-md">
+      <div className="w-full flex flex-col items-center justify-center gap-6 p-8 z-10">
+        <div className="w-2/3 p-6 text-center rounded-md shadow-md bg-white">
           <h2 className="text-2xl font-bold text-sun mb-2">Our Mission</h2>
           <p>
             Founded in 2023, Lumina aims to make renewable energy accessible to
@@ -23,7 +35,7 @@ export default function About() {
         </div>
 
         {/* Optional: Team Section Placeholder */}
-        <div className="w-2/3 p-6 text-center  rounded-md shadow-md">
+        <div className="w-2/3 p-6 text-center  rounded-md shadow-md bg-white">
           <h2 className="text-2xl font-bold text-sun mb-2">Meet the Team</h2>
           <p>Team members will be displayed here soon.</p>
         </div>
