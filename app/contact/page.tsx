@@ -93,7 +93,7 @@ export default function Contact() {
         />
       </div>
 
-      <div className="h-full w-full sm:hidden">
+      <div className="flex flex-col flex-1 w-full p-0 m-0 sm:hidden">
         <div
           ref={featuresRef}
           className="h-4/5 flex flex-col items-start justify-center p-4 text-[50px] font-bold leading-tight z-10"

@@ -54,7 +54,7 @@ export default function About() {
         />
       </div>
 
-      <div className="sm:hidden w-full h-full">
+      <div className="flex flex-col flex-1 w-full p-0 m-0 sm:hidden">
         {/* Hero Section */}
         <div
           ref={featuresRef}
