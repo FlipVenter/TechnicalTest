@@ -1,85 +1,78 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link"
+import Link from "next/link";
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-    const toggleDropdown = () => {
-        setIsOpen(!isOpen);
-    };
+  const navLinkClass =
+    "relative text-black transition-colors hover:text-sun " +
+    "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 " +
+    "after:bg-sun after:transition-all after:duration-300 hover:after:w-full";
 
-    return (
-        <nav className="relative">
-            <div className="w-full py-3 px-4 flex items-center justify-between md:justify-start md:gap-6">
-                {/* Home link - always visible */}
-                <Link href="/" className=" text-black hover:text-sun hover:font-bold">
-                    Lumina
-                </Link>
+  return (
+    <nav className="sticky top-0 z-50 w-full backdrop-blur bg-white/90 ">
+      <div className="mx-auto w-full px-6 sm:px-10 lg:px-16 xl:px-24">
+        <div
+          className="
+        flex items-center justify-between w-full
+        min-h-[64px]
+        sm:min-h-[72px]
+        md:min-h-[90px]
+        lg:min-h-[120px]
+        xl:min-h-[250px]
+      "
+        >
+          {/* Logo */}
+          <Link
+            href="/"
+            className="
+          font-bold text-2xl
+          sm:text-[4vh]
+          text-black hover:text-sun transition-colors
+        "
+          >
+            Lumina
+          </Link>
 
-                {/* Hamburger menu for small screens and below */}
-                <button
-                    onClick={toggleDropdown}
-                    className="md:hidden flex flex-col space-y-1 p-2"
-                    aria-label="Toggle menu"
-                >
-                    <span className="block w-6 h-0.5 bg-black"></span>
-                    <span className="block w-6 h-0.5 bg-black"></span>
-                    <span className="block w-6 h-0.5 bg-black"></span>
-                </button>
+          {/* Hamburger */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="sm:hidden flex flex-col space-y-1.5 p-2"
+            aria-label="Toggle menu"
+          >
+            <span className="w-7 h-0.5 bg-black"></span>
+            <span className="w-7 h-0.5 bg-black"></span>
+            <span className="w-7 h-0.5 bg-black"></span>
+          </button>
 
-                {/* Desktop horizontal links (md and above) */}
-                <div className="hidden md:flex items-center gap-6">
-                    <Link href="/services" className="btn btn-primary text-black">
-                        Services
-                    </Link>
-                    <Link href="/about" className="btn btn-primary text-black">
-                        About Us
-                    </Link>
-                    <Link href="/contact" className="btn btn-primary text-black">
-                        Contact
-                    </Link>
-                </div>
-
-                {/* Mobile dropdown menu */}
-                {isOpen && (
-                    <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50">
-                        <div className="py-2">
-                            <Link
-                                href="/"
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-sun"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                Home
-                            </Link>
-                            <Link
-                                href="/services"
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                Services
-                            </Link>
-                            <Link
-                                href="/about"
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                About Us
-                            </Link>
-                            <Link
-                                href="/contact"
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                Contact
-                            </Link>
-                        </div>
-                    </div>
-                )}
-            </div>
-        </nav>
-    );
+          {/* Desktop links */}
+          <div
+            className="
+          hidden sm:flex items-center
+          gap-8
+          md:gap-10
+          lg:gap-12
+          xl:gap-16
+          text-lg
+          sm:text-[3vh]
+        "
+          >
+            <Link href="/services" className={navLinkClass}>
+              Services
+            </Link>
+            <Link href="/about" className={navLinkClass}>
+              About Us
+            </Link>
+            <Link href="/contact" className={navLinkClass}>
+              Contact
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
 };
 
-export default Navbar; 
+export default Navbar;

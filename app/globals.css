@@ -8,22 +8,22 @@ body {
 /* Custom color definitions for Tailwind v4 */
 @theme {
   --color-navy: #002363;
-  --color-marine: #174A74;
-  --color-solar: #FFD700;
+  --color-marine: #174a74;
+  --color-solar: #ffd700;
   --color-cloud: #fffbea;
-  --color-sun: #FFA600;
+  --color-sun: #ffa600;
 
   --font-family-inter: var(--font-inter);
 
   /* You can also define color palettes */
   --color-brand-primary: #002363;
-  --color-brand-secondary: #174A74;
-  --color-brand-accent: #FFD700;
+  --color-brand-secondary: #174a74;
+  --color-brand-accent: #ffd700;
 }
 
 /* Responsive background images */
 .responsive-bg {
-  background-image: url('/solarPanelImage.png');
+  background-image: url("/solarPanelImage.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -79,4 +79,3 @@ body {
 .transition-light-dark {
   transition: background-color 0.3s ease-in-out;
 }
-
