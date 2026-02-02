@@ -363,12 +363,10 @@ export default function Home() {
         </div>
 
         {/* features */}
-        <div
-          ref={desktopFeaturesRef}
-          className="h-[80vh] flex flex-col justify-center items-center"
-        >
+        <div className="h-[80vh] flex flex-col justify-center items-center">
           <div className="w-full h-1/2 flex flex-row justify-center items-center space-x-[5vh]">
             <div
+              ref={desktopFeaturesRef}
               className="
                   px-4 bg-white shadow-2xl rounded-[2vh]
                   h-[30vh] w-[28vw]
@@ -394,10 +392,17 @@ export default function Home() {
                 >
                   Lower bills, brighter days — your wallet will thank you.
                 </p>
+                <button
+                  className={`w-[8vw] h-[5vh] my-[2vh] text-[2vh] text-gray-600 hover:bg-sun focus:bg-sun border-[0.4vh] border-gray-600 hover:border-sun rounded-[1vh]
+                    ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
+                >
+                  Learn More
+                </button>
               </div>
             </div>
 
             <div
+              ref={desktopFeaturesRef}
               className="
                   px-4 bg-white shadow-2xl rounded-[2vh]
                   h-[30vh] w-[28vw]
@@ -413,7 +418,6 @@ export default function Home() {
                 >
                   25-Year Warranty
                 </div>
-
                 <p
                   className={`
     mt-[2vh] text-[2.2vh] text-gray-600 max-w-[85%] leading-relaxed
@@ -423,15 +427,19 @@ export default function Home() {
                 >
                   Peace of mind, backed by decades of sunshine.
                 </p>
+                <button
+                  className={`w-[8vw] h-[5vh] my-[2vh] text-[2vh] text-gray-600 hover:bg-sun focus:bg-sun border-[0.4vh] border-gray-600 hover:border-sun rounded-[1vh]
+                    ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
+                >
+                  Learn More
+                </button>
               </div>
             </div>
 
             <div
+              ref={desktopFeaturesRef}
               className="
-                px-4 bg-white shadow-2xl rounded-[2vh]
-                h-[30vh] w-[28vw]
-                flex justify-center items-start py-[2vh]
-              "
+                px-4 bg-white shadow-2xl rounded-[2vh] h-[30vh] w-[28vw] flex justify-center items-start py-[2vh] "
             >
               <div className="flex flex-col items-center text-center">
                 <div
@@ -452,6 +460,12 @@ export default function Home() {
                 >
                   Clean energy today, a greener tomorrow.
                 </p>
+                <button
+                  className={`w-[8vw] h-[5vh] my-[2vh] text-[2vh] text-gray-600 hover:bg-sun focus:bg-sun border-[0.4vh] border-gray-600 hover:border-sun rounded-[1vh]
+                    ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
+                >
+                  Learn More
+                </button>
               </div>
             </div>
           </div>

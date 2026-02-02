@@ -132,7 +132,7 @@ export default function About() {
           <div
             className={`${isVisible ? "animate-slide-in-1" : "opacity-0"}  `}
           >
-            Contact
+            About
           </div>
           <div
             className={`${isVisible ? "animate-slide-in-2" : "opacity-0"}   text-sun`}
@@ -142,8 +142,8 @@ export default function About() {
         </div>
 
         {/* Company Mission Section */}
-        <div className="w-full h-[50vh] flex flex-col items-center justify-center gap-6 p-8 z-10">
-          <div className="w-3/4 h-[15vh] p-6 text-center rounded-md shadow-md bg-white z-10">
+        <div className="w-full h-[50vh] flex flex-col items-center justify-center gap-[3vh] p-8 z-10">
+          <div className="w-[40vw] h-[15vh] p-6 text-center rounded-[2vh] shadow-md bg-white z-10">
             <h2 className="text-[3vh] font-bold text-sun mb-2">Our Mission</h2>
             <p className="text-[2vh] text-wrap">
               Founded in 2023, Lumina aims to make renewable energy accessible
@@ -152,7 +152,7 @@ export default function About() {
           </div>
 
           {/* Optional: Team Section Placeholder */}
-          <div className="w-3/4 h-[15vh] p-6 text-center  rounded-md shadow-md bg-white z-10">
+          <div className="w-[40vw] h-[15vh] p-6 text-center  rounded-[2vh] shadow-md bg-white z-10">
             <h2 className="text-[3vh] font-bold text-sun mb-2">
               Meet the Team
             </h2>

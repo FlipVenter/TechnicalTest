@@ -155,7 +155,7 @@ export default function Services() {
 
         {/* Services List Section */}
         <div className="w-full h-[60vh] flex flex-col items-center justify-center gap-[3vh] p-8  z-10">
-          <div className="h-[20vh] w-[40vw] p-6 text-center rounded-md shadow-md bg-white z-10">
+          <div className="h-[20vh] w-[40vw] p-6 text-center rounded-[2vh] shadow-md bg-white z-10">
             <h2 className="text-[4vh] font-bold text-sun mb-2">
               Residential Installation
             </h2>
@@ -164,7 +164,7 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="h-[20vh] w-[40vw] p-6 text-center  rounded-md shadow-md bg-white z-10">
+          <div className="h-[20vh] w-[40vw] p-6 text-center  rounded-[2vh] shadow-md bg-white z-10">
             <h2 className="text-[4vh] font-bold text-sun mb-2">
               Battery Storage
             </h2>
@@ -173,7 +173,7 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="h-[20vh] w-[40vw] p-6 text-center rounded-md shadow-md bg-white z-10">
+          <div className="h-[20vh] w-[40vw] p-6 text-center rounded-[2vh] shadow-md bg-white z-10">
             <h2 className="text-[4vh] font-bold text-sun mb-2">
               Maintenance & Cleaning
             </h2>

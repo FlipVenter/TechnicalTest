@@ -12,14 +12,11 @@ const inter = Inter({
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} overscroll-x-none overscroll-y-none p-0 m-0 w-full  scroll-smooth`}
-      >
+        className={`${inter.variable} overscroll-x-none overscroll-y-none p-0 m-0 w-full  scroll-smooth`}>
         <Navbar />
         <main>{children}</main>
       </body>
