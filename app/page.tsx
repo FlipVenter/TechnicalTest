@@ -469,11 +469,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          {/* <div className="text-[4vh]">with</div> */}
-          <div className="text-[7vh]  flex flex-col gap-0 justify-baseline items-baseline">
-            <div className="p-0 m-0 text-sun text-[8vh]">Lumina</div>
-            <div className="p-0 m-0">Solar Solutions</div>
-          </div>
         </div>
 
         {/* footer */}
