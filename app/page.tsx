@@ -351,7 +351,7 @@ export default function Home() {
         text-white bg-black
         hover:bg-amber-500 hover:text-black
         focus:bg-sun focus:text-black
-        border-8 border-white hover:border-black
+        border-[0.3vh] border-white hover:border-black
         rounded-xs md:rounded-[1vh]
         px-10 py-3
         text-[3vh]
