@@ -242,8 +242,8 @@ export default function Contact() {
         </div>
 
         {/* Contact Form Section */}
-        <div className="w-full flex flex-col items-center justify-center gap-[3vh] p-8 z-10 ">
-          <div className="min-h-[60vh] max-h-[80vh] overflow-hidden w-3/5 py-[5vh] px-[4vh] text-center rounded-[2vh] shadow-md bg-white z-10">
+        <div className="min-h-[65vh] max-h-[95vh] w-full flex flex-col items-center justify-center gap-[3vh] p-8 z-10 bg-green-500">
+          <div className="min-h-[65vh] max-h-[85vh] overflow-hidden w-3/5 py-[5vh] px-[4vh] text-center rounded-[2vh] shadow-md bg-white z-10">
             {submitted && (
               <div className="mb-4 p-2  text-green-900 rounded">
                 Your message has been sent successfully!
@@ -316,7 +316,7 @@ export default function Contact() {
           </div>
 
           {/* Address Section */}
-          <div className="h-[10vh] w-3/5 p-6 text-center  rounded-md shadow-md z-10 bg-white">
+          <div className="h-[10vh] w-3/5 p-6 text-center  rounded-[2vh] shadow-md z-10 bg-white">
             <h2 className="text-[3vh] font-bold text-sun mb-2">Our Office</h2>
             <p className="text-[2vh]">123 Sunshine Blvd, Tech City</p>
           </div>

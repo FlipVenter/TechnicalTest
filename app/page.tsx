@@ -308,14 +308,7 @@ export default function Home() {
         {/* CTA */}
         <div className="relative min-h-[60vh] overflow-hidden">
           {/* Background: HomeBigCTA */}
-          <div
-            className="
-      absolute inset-0
-      bg-[url('/svg/HomeBigCTA.svg')]
-      bg-cover bg-center bg-no-repeat
-      z-10
-    "
-          />
+          <div className="absolute inset-0 bg-[url('/svg/HomeBigCTA.svg')] bg-cover bg-center bg-no-repeat z-10 " />
 
           {/* Underlay Sun SVG */}
           {/* <div
@@ -334,29 +327,12 @@ export default function Home() {
           /> */}
 
           {/* Content */}
-          <div
-            className="
-      relative z-20
-      flex flex-col justify-center items-center gap-10
-      min-h-[60vh]
-      text-center
-    "
-          >
+          <div className="relative z-20 flex flex-col justify-center items-center gap-10 min-h-[60vh] text-center">
             <div className="text-[6vw] md:text-[4vh] text-white ">
               Get a quote Today
             </div>
 
-            <button
-              className="
-        text-white bg-black
-        hover:bg-amber-500 hover:text-black
-        focus:bg-sun focus:text-black
-        border-[0.3vh] border-white hover:border-black
-        rounded-xs md:rounded-[1vh]
-        px-10 py-3
-        text-[3vh]
-      "
-            >
+            <button className=" text-white bg-black hover:bg-amber-500 hover:text-black focus:bg-sun focus:text-black border-[0.3vh] border-white hover:border-black rounded-xs md:rounded-[1vh] px-10 py-3 text-[3vh] ">
               Get Started
             </button>
           </div>
@@ -367,11 +343,7 @@ export default function Home() {
           <div className="w-full h-1/2 flex flex-row justify-center items-center space-x-[5vh]">
             <div
               ref={desktopFeaturesRef}
-              className="
-                  px-4 bg-white shadow-2xl rounded-[2vh]
-                  h-[30vh] w-[28vw]
-                  flex justify-center items-start py-[2vh]
-            "
+              className=" px-4 bg-white shadow-2xl rounded-[2vh] h-[30vh] w-[28vw] flex justify-center items-start py-[2vh] "
             >
               <div className="flex flex-col items-center text-center">
                 <div
@@ -384,11 +356,7 @@ export default function Home() {
                 </div>
 
                 <p
-                  className={`
-    mt-[2vh] text-[2.2vh] text-gray-600 max-w-[85%] leading-relaxed
-    transition-all duration-700
-    ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}
-  `}
+                  className={` mt-[2vh] text-[2.2vh] text-gray-600 max-w-[85%] leading-relaxed transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
                 >
                   Lower bills, brighter days — your wallet will thank you.
                 </p>
@@ -403,11 +371,7 @@ export default function Home() {
 
             <div
               ref={desktopFeaturesRef}
-              className="
-                  px-4 bg-white shadow-2xl rounded-[2vh]
-                  h-[30vh] w-[28vw]
-                  flex justify-center items-start py-[2vh]
-                "
+              className=" px-4 bg-white shadow-2xl rounded-[2vh] h-[30vh] w-[28vw] flex justify-center items-start py-[2vh]"
             >
               <div className="flex flex-col items-center text-center">
                 <div
@@ -419,11 +383,7 @@ export default function Home() {
                   25-Year Warranty
                 </div>
                 <p
-                  className={`
-    mt-[2vh] text-[2.2vh] text-gray-600 max-w-[85%] leading-relaxed
-    transition-all duration-700
-    ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}
-  `}
+                  className={`mt-[2vh] text-[2.2vh] text-gray-600 max-w-[85%] leading-relaxed transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
                 >
                   Peace of mind, backed by decades of sunshine.
                 </p>
@@ -452,11 +412,7 @@ export default function Home() {
                 </div>
 
                 <p
-                  className={`
-    mt-[2vh] text-[2.2vh] text-gray-600 max-w-[85%] leading-relaxed
-    transition-all duration-700
-    ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}
-  `}
+                  className={`mt-[2vh] text-[2.2vh] text-gray-600 max-w-[85%] leading-relaxed transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
                 >
                   Clean energy today, a greener tomorrow.
                 </p>
@@ -473,17 +429,7 @@ export default function Home() {
 
         {/* footer */}
         <div className="relative h-[30vh] w-full">
-          <div
-            className="
-      absolute bottom-0 left-0 w-full
-      h-[25vh] md:h-[25vh] lg:h-[25vh]
-      bg-[url('/svg/BigFooterImage.svg')]
-      bg-no-repeat
-      bg-bottom
-      bg-cover
-      pointer-events-none
-    "
-          />
+          <div className=" absolute bottom-0 left-0 w-full h-[25vh] md:h-[25vh] lg:h-[25vh] bg-[url('/svg/BigFooterImage.svg')] bg-no-repeat bg-bottom bg-cover pointer-events-none " />
         </div>
       </div>
     </div>
