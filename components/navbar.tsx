@@ -26,10 +26,7 @@ const Navbar = () => {
           className="
         flex items-center justify-between w-full
         min-h-[64px]
-        sm:min-h-[72px]
-        md:min-h-[90px]
-        lg:min-h-[120px]
-        xl:min-h-[250px]
+        sm:min-h-[10vh]
       "
         >
           {/* Logo */}
