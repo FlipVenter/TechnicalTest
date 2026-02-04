@@ -316,7 +316,7 @@ export default function Contact() {
           </div>
 
           {/* Address Section */}
-          <div className="h-[10vh] w-3/5 p-6 text-center  rounded-[2vh] shadow-md z-10 bg-white">
+          <div className="h-[10vh] w-3/5 p-6 text-center justify-center flex flex-col items-center rounded-[2vh] shadow-md z-10 bg-white">
             <h2 className="text-[3vh] font-bold text-sun mb-2">Our Office</h2>
             <p className="text-[2vh]">123 Sunshine Blvd, Tech City</p>
           </div>
