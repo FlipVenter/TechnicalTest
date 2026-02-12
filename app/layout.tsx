@@ -1,7 +1,10 @@
+"use client";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/navbar";
+import { useEffect } from "react";
+import Lenis from "lenis";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -13,10 +16,19 @@ const inter = Inter({
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} overscroll-x-none overscroll-y-none p-0 m-0 w-full  scroll-smooth`}>
+        className={`${inter.variable} overscroll-x-none overscroll-y-none p-0 m-0 w-full  scroll-smooth`}
+      >
         <Navbar />
         <main>{children}</main>
       </body>

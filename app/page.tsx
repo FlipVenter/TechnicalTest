@@ -339,7 +339,7 @@ export default function Home() {
         </div>
 
         {/* features */}
-        <div className="h-[80vh] flex flex-col justify-center items-center">
+        <div className="h-[70vh] flex flex-col justify-center items-center">
           <div className="w-full h-1/2 flex flex-row justify-center items-center space-x-[5vh]">
             <div
               ref={desktopFeaturesRef}
